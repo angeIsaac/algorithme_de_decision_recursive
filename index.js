@@ -43,3 +43,24 @@ if (isNaN(age) || age < 0) {
     }
 }
 
+
+function fibonacci(n) {
+    if (n <= 0) {
+        return 0;
+    } else if (n === 1) {
+        return 1;
+    } else {
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+// Exemple d'utilisation
+const n = parseInt(23);
+if (isNaN(n) || n < 0) {
+    console.log("Veuillez entrer une position valide (un nombre entier non négatif).");
+} else {
+    const result = fibonacci(n);
+    console.log(`Le ${n}-ième nombre de Fibonacci est : ${result}`);
+}
+
+
