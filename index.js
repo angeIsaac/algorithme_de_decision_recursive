@@ -14,3 +14,32 @@ if (isLeapYear(year)) {
     console.log(`${year} n'est pas une année bissextile.`);
 }
 
+
+function determineTicketPrice(age) {
+    if (age <= 12) {
+        return 10;
+    } else if (age >= 13 && age <= 17) {
+        return 15;
+    } else if (age >= 18) {
+        return 20;
+    } else {
+        return "Âge invalide";
+    }
+}
+
+// Demande de l'âge à l'utilisateur
+const age = 12
+
+// Vérification si l'âge est un nombre valide
+if (isNaN(age) || age < 0) {
+    console.log("Veuillez entrer un âge valide.");
+} else {
+    // Détermination du prix du billet
+    const ticketPrice = determineTicketPrice(age);
+    if (typeof ticketPrice === "number") {
+        console.log(`Le prix du billet est de ${ticketPrice} $.`);
+    } else {
+        console.log(ticketPrice);
+    }
+}
+
